@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { MoveLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,17 +10,8 @@ const GradientBackground = () => (
 );
 
 const FloatingShape = ({ className }: { className?: string }) => (
-  <motion.div
+  <div
     className={`absolute bg-white rounded-full mix-blend-multiply filter blur-xl opacity-70 ${className}`}
-    animate={{
-      scale: [1, 1.2, 1],
-      rotate: [0, 90, 0],
-    }}
-    transition={{
-      duration: 20,
-      ease: "easeInOut",
-      repeat: Infinity,
-    }}
   />
 );
 
@@ -34,14 +24,11 @@ const AnimatedImage = ({
   alt: string;
   className?: string;
 }) => (
-  <motion.div
+  <div
     className={`relative overflow-hidden rounded-2xl shadow-lg ${className}`}
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
   >
     <Image src={src} alt={alt} fill className="object-cover" />
-  </motion.div>
+  </div>
 );
 
 const AnimatedText = ({
@@ -50,15 +37,7 @@ const AnimatedText = ({
 }: {
   children: React.ReactNode;
   delay?: number;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay }}
-  >
-    {children}
-  </motion.div>
-);
+}) => <div>{children}</div>;
 
 export default function About() {
   return (
@@ -69,7 +48,7 @@ export default function About() {
           asChild
         >
           <Link href="/">
-            <MoveLeft className="mr-1"/>
+            <MoveLeft className="mr-1" />
             {/* Retour à la page d'accueil */}
           </Link>
         </Button>
@@ -159,13 +138,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-pink-600"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-      />
     </div>
   );
 }

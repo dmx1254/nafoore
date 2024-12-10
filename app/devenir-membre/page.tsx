@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -96,12 +95,7 @@ export default function Register() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-20 py-12 px-4">
-      <motion.div
-        className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="bg-green-600 p-6 text-white">
           <h1 className="text-2xl font-semibold">
             Bienvenue sur le portail d'adhésion du Mouvement NAAFOREMEEN !
@@ -111,14 +105,8 @@ export default function Register() {
           </p>
         </div>
 
-        <motion.form
-          onSubmit={handleSubmit}
-          className="p-6 space-y-4"
-          variants={formVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div variants={itemVariants} className="space-y-1">
+        <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          <div className="space-y-1">
             <Label
               htmlFor="firstName"
               className="text-sm font-medium text-gray-700 flex items-center"
@@ -133,9 +121,9 @@ export default function Register() {
               required
               className="w-full px-4 py-5 border-gray-300 rounded-md shadow-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             />
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants} className="space-y-1">
+          <div className="space-y-1">
             <Label
               htmlFor="lastName"
               className="text-sm font-medium text-gray-700 flex items-center"
@@ -150,9 +138,9 @@ export default function Register() {
               required
               className="w-full px-4 py-5 border-gray-300 rounded-md shadow-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             />
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants} className="space-y-1">
+          <div className="space-y-1">
             <Label
               htmlFor="district"
               className="text-sm font-medium text-gray-700 flex items-center"
@@ -173,9 +161,9 @@ export default function Register() {
                 <SelectItem value="Madina Fresbeh">Madina Fresbeh</SelectItem>
               </SelectContent>
             </Select>
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants} className="space-y-1">
+          <div className="space-y-1">
             <Label
               htmlFor="phone"
               className="text-sm font-medium text-gray-700 flex items-center"
@@ -197,9 +185,9 @@ export default function Register() {
             {phoneError && (
               <span className="text-sm text-red-600">{phoneError}</span>
             )}
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants} className="space-y-1">
+          <div className="space-y-1">
             <Label
               htmlFor="photo"
               className="text-sm font-medium text-gray-700"
@@ -227,18 +215,18 @@ export default function Register() {
                 required
               />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants}>
+          <div>
             <Button
               type="submit"
               className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-300"
             >
               {isLoading ? <Loader className="animate-spin" /> : " S'inscrire"}
             </Button>
-          </motion.div>
-        </motion.form>
-      </motion.div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

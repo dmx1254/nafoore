@@ -2,12 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Table,
@@ -22,10 +16,6 @@ import {
   Users,
   PlusCircle,
   MapPin,
-  MoreHorizontal,
-  Trash2,
-  Edit,
-  FilePenLine,
   Trash,
   LogOut,
 } from "lucide-react";
@@ -309,7 +299,6 @@ export default function Dashboard() {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-          F
         </>
       )}
       <button
