@@ -14,7 +14,7 @@ const Navbar = () => {
     pathname !== "/login" && (
       <nav
         aria-label="navbar"
-        className="flex items-center justify-between p-6 lg:px-8 h-20"
+        className="flex items-center justify-between p-6 lg:px-8 h-20 z-50"
       >
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -22,7 +22,7 @@ const Navbar = () => {
             width={70}
             height={70}
             alt="Bassirou Hamdine Sy"
-            className="h-12 w-12 object-cover object-center rounded-full"
+            className="h-10 w-10 lg:h-12 lg:w-12 object-cover object-center rounded-full"
           />
           <span className="sr-only">Bassirou Hamdine Sy</span>
           <span className="max-lg:hidden uppercase font-extrabold">
