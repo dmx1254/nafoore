@@ -18,6 +18,7 @@ import {
   MapPin,
   Trash,
   LogOut,
+  Loader,
 } from "lucide-react";
 import axios from "axios";
 import { MemberResponse } from "@/lib/types/member";
@@ -41,7 +42,9 @@ import { signOut } from "next-auth/react";
 
 export default function Dashboard() {
   const [members, setMembers] = useState<MemberResponse[]>([]);
+  const [membersLength, setMembersLength] = useState<number>(0);
   const [isMemberLoading, setIsMemberLoading] = useState<boolean>(true);
+  const [addMoreLoading, setAddMoreLoading] = useState<boolean>(false);
   const [memberToDelete, setMemberToDelete] = useState<string | null>(null);
 
   useEffect(() => {
@@ -51,9 +54,11 @@ export default function Dashboard() {
   const fetchMembers = async () => {
     try {
       setIsMemberLoading(true);
-      const response = await axios.get("/api/members");
+      const data = { pageNumber: 0 };
+      const response = await axios.post("/api/members", data);
       if (response.data.members) {
         setMembers(response.data.members);
+        setMembersLength(response.data.membersLength);
       }
     } catch (error) {
       console.error("Error fetching members:", error);
@@ -65,6 +70,27 @@ export default function Dashboard() {
       });
     } finally {
       setIsMemberLoading(false);
+    }
+  };
+
+  const addMore = async () => {
+    try {
+      setAddMoreLoading(true);
+      const data = { pageNumber: 20 };
+      const response = await axios.post("/api/members", data);
+      if (response.data.members) {
+        setMembers((prevMembers) => [...prevMembers, ...response.data.members]);
+      }
+    } catch (error) {
+      console.error("Error fetching members:", error);
+      toast.success("Impossible de charger les membres", {
+        style: {
+          background: "green",
+          color: "white",
+        },
+      });
+    } finally {
+      setAddMoreLoading(false);
     }
   };
 
@@ -299,6 +325,19 @@ export default function Dashboard() {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
+          <Button
+            className="flex my-8 mx-auto items-center justify-center self-center"
+            variant="outline"
+            disabled={membersLength <= members.length}
+            onClick={addMore}
+          >
+            Voir plus
+          </Button>
+          <div className="flex my-8 mx-auto items-center justify-center self-center">
+            {addMoreLoading && (
+              <Loader className="animate-spin text-black/40" size={24} />
+            )}
+          </div>
         </>
       )}
       <button

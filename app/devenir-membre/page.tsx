@@ -19,21 +19,6 @@ import PhoneInput from "react-phone-number-input";
 import { E164Number } from "libphonenumber-js/core";
 import "react-phone-number-input/style.css";
 
-const formVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
-
 export default function Register() {
   const [photo, setPhoto] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -57,7 +42,7 @@ export default function Register() {
           phone: phone,
           photo: photo,
         };
-        const response = await axios.post("/api/members", data);
+        const response = await axios.post("/api/create-member", data);
 
         if (response.data) {
           toast.success("Merci de nous avoir rejoint!", {
