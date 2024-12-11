@@ -42,23 +42,22 @@ const AnimatedText = ({
 export default function About() {
   return (
     <div className="min-h-screen relative overflow-hidden pt-4">
-      <AnimatedText delay={1.4}>
-        <Button
-          className="absolute left-[5%] z-50 bg-gradient-to-br from-purple-600 to-pink-600"
-          asChild
-        >
-          <Link href="/">
-            <MoveLeft className="mr-1" />
-            {/* Retour à la page d'accueil */}
-          </Link>
-        </Button>
-      </AnimatedText>
-
       <GradientBackground />
       <FloatingShape className="h-64 w-64 left-[-5%] top-1/4" />
       <FloatingShape className="h-96 w-96 right-[-10%] top-1/2" />
 
       <div className="container mx-auto px-4 py-16 relative z-10">
+        <AnimatedText delay={1.4}>
+          <Button
+            className="absolute left-[1.%] top-[0%] z-50 bg-gradient-to-br from-purple-600 to-pink-600"
+            asChild
+          >
+            <Link href="/">
+              <MoveLeft className="mr-1" />
+              {/* Retour à la page d'accueil */}
+            </Link>
+          </Button>
+        </AnimatedText>
         <div className="grid md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-7 space-y-8">
             <AnimatedText>

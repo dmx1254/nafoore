@@ -21,14 +21,14 @@ const Navbar = () => {
             src="/hamdin2.jpeg"
             width={70}
             height={70}
-            alt="Bassirou Hamdine Sy"
-            className="h-10 w-10 lg:h-12 lg:w-12 object-cover object-center rounded-full"
+            alt="Mouvement NAAFOREMEEN"
+            className="h-10 w-10 lg:h-11 lg:w-11 object-cover object-center rounded-full"
           />
-          <span className="sr-only">Bassirou Hamdine Sy</span>
+          <span className="sr-only">Mouvement NAAFOREMEEN</span>
           <span className="max-lg:hidden uppercase font-extrabold">
-            Bassirou Hamdine Sy
+            Mouvement NAAFOREMEEN
           </span>
-          <span className="lg:hidden flex uppercase font-extrabold">BHS</span>
+          <span className="lg:hidden flex uppercase font-extrabold">MN</span>
         </Link>
         <div className="flex items-center gap-4">
           <Link

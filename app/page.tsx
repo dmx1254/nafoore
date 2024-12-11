@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center bg-white">
-      <div className="relative  isolate px-6  -mt-16 lg:px-8">
+    <div className="flex items-center justify-center h-screen bg-white">
+      <div className="relative isolate px-6 -mt-36 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
