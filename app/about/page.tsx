@@ -124,12 +124,12 @@ export default function About() {
             />
             <div className="grid grid-cols-2 gap-4">
               <AnimatedImage
-                src="/hamdin2.jpeg"
+                src="/hmd1.jpeg"
                 alt="Community Work"
                 className="h-[250px]"
               />
               <AnimatedImage
-                src="/guede.jpeg"
+                src="/hmd2.jpeg"
                 alt="Leadership"
                 className="h-[250px]"
               />

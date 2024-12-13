@@ -82,7 +82,7 @@
 }
 
 @layer utilities {
-  .carte-membre::before {
+  /* .carte-membre::before {
     position: absolute;
     content: "";
     background-image: url("../public/pastef.jpeg");
@@ -93,7 +93,7 @@
     opacity: 0.3;
     top: -2%;
     z-index: -1;
-  }
+  } */
   .input-phone input {
     outline: none !important;
     box-shadow: none !important;

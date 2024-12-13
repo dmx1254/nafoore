@@ -144,6 +144,7 @@ export default function Register() {
                 <SelectItem value="Diabé">Diabé</SelectItem>
                 <SelectItem value="Dierry">Dierry</SelectItem>
                 <SelectItem value="Madina Fresbeh">Madina Fresbeh</SelectItem>
+                <SelectItem value="Légale Guédé">Légale Guédé</SelectItem>
               </SelectContent>
             </Select>
           </div>
