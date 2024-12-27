@@ -62,12 +62,12 @@ export default function About() {
           <div className="md:col-span-7 space-y-8">
             <AnimatedText>
               <h1 className="text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-                Bassirou Hamdine Sy
+                Bassirou Hamedine SYfbgmn
               </h1>
             </AnimatedText>
             <AnimatedText delay={0.2}>
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Bassirou Hamdine Sy incarne l'excellence, la discipline et le
+                Bassirou Hamedine SY incarne l'excellence, la discipline et le
                 leadership au sein de l'administration sénégalaise. Ce jeune
                 professionnel, après un parcours remarquable à l'École Nationale
                 d'Administration (ENA), a su se distinguer par sa rigueur, son
@@ -104,7 +104,7 @@ export default function About() {
             </AnimatedText>
             <AnimatedText delay={0.8}>
               <p className="text-xl text-gray-700 leading-relaxed">
-                Bassirou Hamdine Sy est bien plus qu’un cadre administratif
+                Bassirou Hamedine SY est bien plus qu’un cadre administratif
                 talentueux : il est un bâtisseur de solutions, un visionnaire
                 déterminé à contribuer au progrès et à la modernisation des
                 structures étatiques. À travers son parcours, il illustre
@@ -119,7 +119,7 @@ export default function About() {
           <div className="md:col-span-5 space-y-6">
             <AnimatedImage
               src="/hamdin1.jpeg"
-              alt="Bassirou Hamdine Sy"
+              alt="Bassirou Hamedine SY"
               className="h-[870px] object-bottom"
             />
             <div className="grid grid-cols-2 gap-4">
