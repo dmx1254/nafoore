@@ -7,13 +7,13 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bassirou Hamdine Sy | Excellence et Leadership au Sénégal",
+  title: "Bassirou Hamedine SY | Excellence et Leadership au Sénégal",
   description:
-    "Découvrez le parcours de Bassirou Hamdine Sy, un leader dynamique et rigoureux, engagé dans la modernisation et le progrès de l’administration publique sénégalaise.",
+    "Découvrez le parcours de Bassirou Hamedine SY, un leader dynamique et rigoureux, engagé dans la modernisation et le progrès de l’administration publique sénégalaise.",
   icons: {
-    icon: "/hamdin1.jpeg",
-    shortcut: "/hamdin1.jpeg",
-    apple: "/hamdin1.jpeg",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 

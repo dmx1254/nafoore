@@ -33,10 +33,10 @@ export default function Home() {
           </div>
           <div className="text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl max-sm:mt-4">
-              Bassirou Hamdine Sy
+              Bassirou Hamedine SY
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-700">
-              Bassirou Hamdine Sy incarne l'excellence, la discipline et le
+              Bassirou Hamedine SY incarne l'excellence, la discipline et le
               leadership au sein de l'administration sénégalaise. Ce jeune
               professionnel, après un parcours remarquable à l'École Nationale
               d'Administration (ENA), a su se distinguer par sa rigueur, son

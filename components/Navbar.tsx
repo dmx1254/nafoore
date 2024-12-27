@@ -18,11 +18,11 @@ const Navbar = () => {
       >
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/hamdin2.jpeg"
-            width={70}
-            height={70}
+            src="/logo.png"
+            width={100}
+            height={100}
             alt="Mouvement NAAFOREMEEN"
-            className="h-10 w-10 lg:h-11 lg:w-11 object-cover object-center rounded-full"
+            className="h-12 w-12 lg:h-14 lg:w-14 object-contain object-center rounded-full"
           />
           <span className="sr-only">Mouvement NAAFOREMEEN</span>
           <span className="max-lg:hidden uppercase font-extrabold">
