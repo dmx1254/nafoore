@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         <div className="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 carte-membre">
           <div className="sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-700 ring-1 ring-gray-900/10 hover:ring-gray-900/20 text-center">
+            <div className="relative rounded-full px-2 sm:px-3 py-1 text-sm leading-6 text-gray-700 ring-1 ring-gray-900/10 hover:ring-gray-900/20 text-center max-md:mt-32">
               Rejoindre le mouvement.{" "}
               <Link
                 href="/devenir-membre"
@@ -31,22 +31,22 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center max-md:mt-8">
             <h1 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl max-sm:mt-4">
               Bassirou Hamedine SY
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-700">
-              Bassirou Hamedine SY incarne l'excellence, la discipline et le
+            <p className="mt-6 text-lg leading-8 text-gray-700 text-justify">
+              Bassirou Hamedine SY, Parrain du mouvement Nafore Men, incarne l'excellence, la discipline et le
               leadership au sein de l'administration sénégalaise. Ce jeune
               professionnel, après un parcours remarquable à l'École Nationale
               d'Administration (ENA), a su se distinguer par sa rigueur, son
               dynamisme et son engagement au service du développement.
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-700">
+            {/* <p className="mt-6 text-lg leading-8 text-gray-700">
               Fort d'une expérience de neuf ans dans l'administration
               sénégalaise, il s'est affirmé comme un acteur clé dans la gestion
               et la coordination des ressources financières et administratives.
-            </p>
+            </p> */}
             <div className="mt-10 flex items-center justify-center gap-x-6"></div>
           </div>
         </div>

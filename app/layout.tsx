@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={inter.className}>
-        <div className="flex flex-col">
+        <div className="flex flex-col antialiased">
           {" "}
           <Navbar />
           {children}

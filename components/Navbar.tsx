@@ -33,13 +33,13 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link
             href="/about"
-            className="text-sm cursor-pointer font-semibold leading-6 text-gray7900 transition-colors hover:text-gray-900"
+            className="text-sm cursor-pointer leading-6 text-gray7900 transition-colors hover:text-gray-900"
           >
             À propos
           </Link>
           <Link
             href="/devenir-membre"
-            className="text-sm font-semibold leading-6 text-gray-700 transition-colors hover:text-gray-900"
+            className="text-sm leading-6 text-gray-700 transition-colors hover:text-gray-900"
           >
             devenir membre <span aria-hidden="true">&rarr;</span>
           </Link>

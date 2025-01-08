@@ -62,12 +62,12 @@ export default function About() {
           <div className="md:col-span-7 space-y-8">
             <AnimatedText>
               <h1 className="text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-                Bassirou Hamedine SYfbgmn
+                Bassirou Hamedine SY
               </h1>
             </AnimatedText>
             <AnimatedText delay={0.2}>
-              <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Bassirou Hamedine SY incarne l'excellence, la discipline et le
+              <p className="text-xl text-gray-700 leading-relaxed mb-6 text-justify">
+              Bassirou Hamedine SY, Parrain du mouvement Nafore Men, incarne l'excellence, la discipline et le
                 leadership au sein de l'administration sénégalaise. Ce jeune
                 professionnel, après un parcours remarquable à l'École Nationale
                 d'Administration (ENA), a su se distinguer par sa rigueur, son
@@ -78,7 +78,7 @@ export default function About() {
               </p>
             </AnimatedText>
             <AnimatedText delay={0.4}>
-              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+              <p className="text-xl text-gray-700 leading-relaxed mb-6 text-justify">
                 Doté d’un esprit analytique aiguisé et d’une capacité à relever
                 des défis complexes, M. Sy a occupé avec brio des postes
                 stratégiques, notamment en tant que responsable ou directeur
@@ -90,7 +90,7 @@ export default function About() {
               </p>
             </AnimatedText>
             <AnimatedText delay={0.6}>
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed text-justify">
                 Ceux qui ont eu le privilège de collaborer avec Bassirou Hamdine
                 Sy louent non seulement sa compétence professionnelle, mais
                 aussi ses qualités humaines. Il se distingue par une capacité
@@ -103,7 +103,7 @@ export default function About() {
               </p>
             </AnimatedText>
             <AnimatedText delay={0.8}>
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed text-justify">
                 Bassirou Hamedine SY est bien plus qu’un cadre administratif
                 talentueux : il est un bâtisseur de solutions, un visionnaire
                 déterminé à contribuer au progrès et à la modernisation des
