@@ -32,15 +32,16 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center max-md:mt-8">
-            <h1 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl max-sm:mt-4">
+            <h1 className="text-balance text-xl font-bold tracking-tight text-gray-900 sm:text-6xl max-sm:mt-4">
               Bassirou Hamedine SY
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-700 text-justify">
-              Bassirou Hamedine SY, Parrain du mouvement Nafore Men, incarne l'excellence, la discipline et le
-              leadership au sein de l'administration sénégalaise. Ce jeune
-              professionnel, après un parcours remarquable à l'École Nationale
-              d'Administration (ENA), a su se distinguer par sa rigueur, son
-              dynamisme et son engagement au service du développement.
+            <p className="mt-6 text-lg leading-8 text-gray-700 text-center">
+              Bassirou Hamedine SY, Parrain du mouvement Nafore Men, incarne
+              l'excellence, la discipline et le leadership au sein de
+              l'administration sénégalaise. Ce jeune professionnel, après un
+              parcours remarquable à l'École Nationale d'Administration (ENA), a
+              su se distinguer par sa rigueur, son dynamisme et son engagement
+              au service du développement.
             </p>
             {/* <p className="mt-6 text-lg leading-8 text-gray-700">
               Fort d'une expérience de neuf ans dans l'administration

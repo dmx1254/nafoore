@@ -66,7 +66,7 @@ export default function About() {
               </h1>
             </AnimatedText>
             <AnimatedText delay={0.2}>
-              <p className="text-xl text-gray-700 leading-relaxed mb-6 text-justify">
+              <p className="text-xl text-gray-700 leading-relaxed mb-6 text-pretty">
               Bassirou Hamedine SY, Parrain du mouvement Nafore Men, incarne l'excellence, la discipline et le
                 leadership au sein de l'administration sénégalaise. Ce jeune
                 professionnel, après un parcours remarquable à l'École Nationale
@@ -78,7 +78,7 @@ export default function About() {
               </p>
             </AnimatedText>
             <AnimatedText delay={0.4}>
-              <p className="text-xl text-gray-700 leading-relaxed mb-6 text-justify">
+              <p className="text-xl text-gray-700 leading-relaxed mb-6 text-pretty">
                 Doté d’un esprit analytique aiguisé et d’une capacité à relever
                 des défis complexes, M. Sy a occupé avec brio des postes
                 stratégiques, notamment en tant que responsable ou directeur
@@ -90,7 +90,7 @@ export default function About() {
               </p>
             </AnimatedText>
             <AnimatedText delay={0.6}>
-              <p className="text-xl text-gray-700 leading-relaxed text-justify">
+              <p className="text-xl text-gray-700 leading-relaxed text-pretty">
                 Ceux qui ont eu le privilège de collaborer avec Bassirou Hamdine
                 Sy louent non seulement sa compétence professionnelle, mais
                 aussi ses qualités humaines. Il se distingue par une capacité
@@ -103,7 +103,7 @@ export default function About() {
               </p>
             </AnimatedText>
             <AnimatedText delay={0.8}>
-              <p className="text-xl text-gray-700 leading-relaxed text-justify">
+              <p className="text-xl text-gray-700 leading-relaxed text-pretty">
                 Bassirou Hamedine SY est bien plus qu’un cadre administratif
                 talentueux : il est un bâtisseur de solutions, un visionnaire
                 déterminé à contribuer au progrès et à la modernisation des
