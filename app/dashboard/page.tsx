@@ -48,30 +48,32 @@ export default function Dashboard() {
   const [memberToDelete, setMemberToDelete] = useState<string | null>(null);
 
   useEffect(() => {
+    const fetchMembers = async () => {
+      try {
+        setIsMemberLoading(true);
+        const data = { pageNumber: 0 };
+        const response = await axios.post("/api/members", data);
+        if (response.data.members) {
+          setMembers(response.data.members);
+          setMembersLength(response.data.membersLength);
+        }
+      } catch (error) {
+        console.error("Error fetching members:", error);
+        toast.success("Impossible de charger les membres", {
+          style: {
+            background: "green",
+            color: "white",
+          },
+        });
+      } finally {
+        setIsMemberLoading(false);
+      }
+    };
     fetchMembers();
   }, []);
 
-  const fetchMembers = async () => {
-    try {
-      setIsMemberLoading(true);
-      const data = { pageNumber: 0 };
-      const response = await axios.post("/api/members", data);
-      if (response.data.members) {
-        setMembers(response.data.members);
-        setMembersLength(response.data.membersLength);
-      }
-    } catch (error) {
-      console.error("Error fetching members:", error);
-      toast.success("Impossible de charger les membres", {
-        style: {
-          background: "green",
-          color: "white",
-        },
-      });
-    } finally {
-      setIsMemberLoading(false);
-    }
-  };
+  // console.log("member Length", membersLength);
+  // console.log("member.length", members.length);
 
   const addMore = async () => {
     try {
@@ -257,13 +259,13 @@ export default function Dashboard() {
                     <TableCell>{member?.firstName}</TableCell>
                     <TableCell>{member?.lastName}</TableCell>
                     <TableCell>
-                      <Badge className="bg-gray-50 text-green-600">
+                      <span className="bg-gray-50 text-green-600 px-1.5 py-1 font-semibold rounded-full">
                         {member?.district}
-                      </Badge>
+                      </span>
                     </TableCell>
                     <TableCell>{member?.phone}</TableCell>
                     <TableCell>
-                      <Badge className="bg-gray-50 text-green-600">
+                      <span className="bg-gray-50 text-green-600 px-1.5 py-1 font-semibold rounded-full">
                         {new Date(member.createdAt).toLocaleDateString(
                           "fr-FR",
                           {
@@ -272,7 +274,7 @@ export default function Dashboard() {
                             year: "numeric",
                           }
                         )}
-                      </Badge>
+                      </span>
                     </TableCell>
                     <TableCell className="text-right">
                       <div className="flex items-center justify-end gap-4">

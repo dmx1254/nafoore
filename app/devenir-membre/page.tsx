@@ -24,6 +24,9 @@ export default function Register() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [phone, setPhone] = useState<E164Number | undefined>();
   const [phoneError, setPhoneError] = useState<string>("");
+  const [selectedDistrict, setSelectedDistrict] = useState<string>("");
+  const [customDistrict, setCustomDistrict] = useState<string>("");
+  const [showCustomDistrict, setShowCustomDistrict] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,7 +41,7 @@ export default function Register() {
         const data = {
           firstName: formData.get("firstName"),
           lastName: formData.get("lastName"),
-          district: formData.get("district"),
+          district: showCustomDistrict ? customDistrict : selectedDistrict,
           phone: phone,
           photo: photo,
         };
@@ -63,6 +66,16 @@ export default function Register() {
       console.log(error);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleDistrictChange = (value: string) => {
+    setSelectedDistrict(value);
+    if (value === "autre") {
+      setShowCustomDistrict(true);
+    } else {
+      setShowCustomDistrict(false);
+      setCustomDistrict("");
     }
   };
 
@@ -124,7 +137,6 @@ export default function Register() {
               className="w-full px-4 py-5 border-gray-300 rounded-md shadow-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             />
           </div>
-
           <div className="space-y-1">
             <Label
               htmlFor="district"
@@ -133,7 +145,12 @@ export default function Register() {
               <MapPin className="w-4 h-4 mr-2 text-green-600" />
               Quartier
             </Label>
-            <Select name="district" required>
+            <Select
+              name="district"
+              required
+              value={selectedDistrict}
+              onValueChange={handleDistrictChange}
+            >
               <SelectTrigger className="w-full px-4 py-5 border-gray-300 rounded-md shadow-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0">
                 <SelectValue placeholder="Sélectionnez votre quartier" />
               </SelectTrigger>
@@ -145,8 +162,22 @@ export default function Register() {
                 <SelectItem value="Dierry">Dierry</SelectItem>
                 <SelectItem value="Madina Fresbeh">Madina Fresbeh</SelectItem>
                 <SelectItem value="Légale Guédé">Légale Guédé</SelectItem>
+                <SelectItem value="autre">Autre</SelectItem>
               </SelectContent>
             </Select>
+
+            {showCustomDistrict && (
+              <div className="mt-2">
+                <Input
+                  type="text"
+                  value={customDistrict}
+                  onChange={(e) => setCustomDistrict(e.target.value)}
+                  placeholder="Veuillez saisir votre quartier"
+                  className="w-full px-4 py-5 border-gray-300 rounded-md shadow-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                  required
+                />
+              </div>
+            )}
           </div>
 
           <div className="space-y-1">

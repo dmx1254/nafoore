@@ -123,13 +123,14 @@ export function EditMemberDialog({
                 className="col-span-3 border-gray-300 shadow-none"
               />
             </div>
-            <div className="flex flex-col items-start gap-4">
+            {/* <div className="flex flex-col items-start gap-4">
               <Label htmlFor="district" className="text-right">
                 Quartier
               </Label>
               <Select
                 name="district"
                 defaultValue={district}
+                value={district}
                 onValueChange={(value) => setDistrict(value)}
               >
                 <SelectTrigger className="w-full px-4 py-5 border-gray-300 rounded-md shadow-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0">
@@ -141,10 +142,11 @@ export function EditMemberDialog({
                   <SelectItem value="sinthiane">Sinthiane</SelectItem>
                   <SelectItem value="Diabé">Diabé</SelectItem>
                   <SelectItem value="Dierry">Dierry</SelectItem>
+
                   <SelectItem value="Madina Fresbeh">Madina Fresbeh</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
+            </div> */}
             <div className="flex flex-col items-start gap-4">
               <Label htmlFor="phone" className="text-right">
                 Téléphone
