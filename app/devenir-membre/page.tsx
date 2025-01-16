@@ -172,7 +172,7 @@ export default function Register() {
                   type="text"
                   value={customDistrict}
                   onChange={(e) => setCustomDistrict(e.target.value)}
-                  placeholder="Veuillez saisir votre quartier"
+                  placeholder="Veuillez indiquer le nom de votre village ou commune"
                   className="w-full px-4 py-5 border-gray-300 rounded-md shadow-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                   required
                 />
