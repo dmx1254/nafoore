@@ -33,7 +33,7 @@ export default function Register() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      if (phone && phone.length < 13) {
+      if (phone && phone.length < 10) {
         setPhoneError("Numero de téléphone incorrect");
       } else {
         setPhoneError("");
